@@ -1,15 +1,16 @@
 package com.example.apparchitecture
 
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.*
 import androidx.lifecycle.ViewModel
 
 class MyViewModel  : ViewModel() {
     var heightInput by mutableStateOf("")
     var weightInput by mutableStateOf("")
 
-    private var height: Float = 0.0f
+    private var height: Float = 0f
         get() {
-            return heightInput.toFloatOrNull() ?: 0.0f
+            return heightInput.toFloatOrNull() ?: 0f
         }
 
     private var weight: Int = 0
